@@ -13,9 +13,9 @@
     <artifactId>org.nira.wso2.sample.install</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
-    <name>Sample Feature P2 Repo</name>
+    <name>Sample Feature Installation</name>
     <url>http://niranjankaru.blogspot.com</url>
-    <description>Sample Feature P2 Repo</description>
+    <description>Sample Feature Installation</description>
 
     <build>
         <plugins>
