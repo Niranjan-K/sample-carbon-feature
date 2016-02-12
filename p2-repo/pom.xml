@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.nira.wso2</groupId>
+        <artifactId>sample.carbon.feature</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
+    <artifactId>org.nira.wso2.sample.p2-repo</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
+    <name>Sample Feature P2 Repo</name>
+    <url>http://niranjankaru.blogspot.com</url>
+    <description>Sample Feature P2 Repo</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.nira.wso2</groupId>
+            <artifactId>org.nira.wso2.sample.feature</artifactId>
+            <type>zip</type>
+            <version>1.0.0</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.wso2.carbon.maven</groupId>
+                <artifactId>carbon-feature-plugin</artifactId>
+                <version>${carbon.maven.plugins.version}</version>
+                <executions>
+                    <execution>
+                        <id>p2-feature-generation</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>generate-repo</goal>
+                        </goals>
+                        <configuration>
+                            <!--<name>p2-repo</name>-->
+                            <targetRepository>file:${basedir}/target/p2-repo</targetRepository>
+                            <features>
+                                <feature>
+                                    <id>org.nira.wso2.sample.feature</id>
+                                    <version>1.0.0</version>
+                                </feature>
+                            </features>
+                        </configuration>
+                    </execution>
+                </executions>
+
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
