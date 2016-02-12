@@ -97,8 +97,4 @@
         </plugins>
     </build>
 
-    <properties>
-        <carbon.maven.plugins.version>2.0.0</carbon.maven.plugins.version>
-    </properties>
-
 </project>
